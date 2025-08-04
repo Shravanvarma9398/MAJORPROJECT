@@ -101,10 +101,6 @@ app.use((req, res, next) =>{
 
 
 
-// app.get("/", (req, res) =>{
-//     res.send("hi, Iam root");
-// });
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
@@ -119,6 +115,13 @@ app.use((err, req, res, next) =>{
     res.status(statusCode).render("error.ejs", {message});
     // res.status(statusCode).send(message);
 });
+
+
+app.get('/', (req, res) => {
+  res.send('Server is working! Home route is live.');
+});
+
+
 app.listen(8080, () =>{
     console.log("server is listening to port 8080");
 });
