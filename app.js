@@ -116,10 +116,12 @@ app.use((err, req, res, next) =>{
     // res.status(statusCode).send(message);
 });
 
-
 app.get('/', (req, res) => {
-  res.send('Server is working! Home route is live.');
+  req.flash('success', 'Welcome to Wanderlust! Click on Explore to see the content.');
+  res.render('listings/home');  // render the full page, not just navbar
 });
+
+
 
 
 app.listen(8080, () =>{
