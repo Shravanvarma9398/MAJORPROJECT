@@ -5,6 +5,32 @@ body{
     min-height: 100vh;
 }
 
+
+
+/*small screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
 .container {
     flex:1;
 }
