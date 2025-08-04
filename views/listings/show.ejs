@@ -51,6 +51,11 @@
   });
 </script>
 
-<script src="/js/map.js"></script>
+<!-- Map Section -->
+<div class="col-6 offset-3 mb-3">
+  <h3>Where you'll be</h3>
+  <div id="map"></div> <!-- This must be present -->
+</div>
 
-<p>Map Token: <%= process.env.MAP_TOKEN ? "Loaded" : "Missing" %></p>
+
+<script src="/js/map.js"></script>
